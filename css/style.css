@@ -1,0 +1,976 @@
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto');
+    src: url('../font/RobotoRegular.woff2') format('woff2'),
+        url('../font/RobotoRegular.woff') format('woff');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto');
+    src: url('../font/RobotoBold.woff2') format('woff2'),
+        url('../font/RobotoBold.woff') format('woff');
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+}
+
+/*____________________ general style ____________________*/
+:root {
+    /* color */
+    --color-white: rgba(255, 255, 255, 1);
+    --color-black: rgba(33, 33, 51, 1);
+    --color-black2: rgba(46, 43, 68, 1);
+    --color-grey: rgba(102, 102, 102, 1);
+    --color-grey2: rgba(133, 133, 155, 1);
+    --color-blue: rgba(63, 42, 255, 1);
+    /* font */
+    --font-size-16: 16px;
+    --font-size-18: 18px;
+    --font-size-40: 40px;
+    --font-size-60: 60px;
+}
+
+/* _______________________ */
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: var(--font-size-16);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin: 0;
+    font-weight: 700;
+    font-size: 0;
+    line-height: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+img {
+    width: 100%;
+}
+
+/* _______________________ */
+h1 {
+    font-size: var(--font-size-60);
+    line-height: 100%;
+}
+
+h2 {
+    font-size: var(--font-size-40);
+    line-height: 100%;
+}
+
+h3 {
+   font-size: var(--font-size-18);
+   line-height: 150%;
+}
+
+.btn {
+    color: var(--color-white);
+    text-align: center;
+    background-color: var(--color-blue);
+    border-radius: 20px;
+    transition: background-color .4s ease;
+}
+
+.container-body {
+    overflow: hidden;
+}
+
+/* --------hover------- */
+.btn:hover,
+.btn:focus {
+background-color: rgb(245, 168, 2);
+outline: none;
+transition: background-color .4s ease;
+}
+
+.btn:active {
+    background-color: var(--color-blue);
+    transition: background-color .2s ease;
+}
+
+/* _______________________________________ header _______________________________________*/
+.navigation__burger-list {
+    display: none;
+}
+
+.header__container {
+background-color: var(--color-blue);
+color: var(--color-white);
+}
+
+.header__nav-container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    align-items: center;
+}
+
+.header__nav-content {
+    align-items: center;
+    position: relative;
+}
+
+.header__nav-logo {
+    max-height: 21px;
+    margin-right: auto;
+} 
+
+.header__nav-navigation {
+    display: inline-block;
+    align-items: center;
+}
+
+
+.navigation__list {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navigation__item:not(:last-child) {
+    margin-right: 57px;
+}
+
+.navigation__link {
+    font-size: var(--font-size-18);
+transition: color .4s ease;
+}
+
+.header__nav-logo {
+    transition: fill .4s ease;
+    }
+
+    .navigation__burger-content {
+        display: none;
+    }
+/* --------hover__focus__active------- */
+.header__nav-logo:hover path,
+.header__nav-logo:focus path {
+fill: rgb(245, 168, 2);
+transition: fill .4s ease;
+}
+
+.header__nav-logo:active path {
+    fill: var(--color-white);
+    transition: fill .2s ease;
+}
+
+.header__nav-logo:focus {
+    outline: none;
+}
+
+.navigation__link:hover,
+.navigation__link:focus {
+    color: rgb(245, 168, 2);
+    outline: none;
+transition: color .4s ease;
+}
+
+.navigation__link:active {
+    transition: color .2s ease;
+    color: var(--color-white);
+}
+
+/* ___________________________________________ body ________________________________________ */
+/* ________________ head ____________________ */
+.head__container {
+    background-color: var(--color-black);
+    background-image: url(../img/3D_skil_backgl.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.head__content-container {
+    align-items: center;
+    position: relative;
+}
+
+.head__content-1 {
+    color: var(--color-white);
+    margin-right: 5px;
+padding-top: 130px;
+padding-bottom: 155px;
+z-index: 2;
+}
+
+.head__h1 {
+    margin-bottom: 25px;
+}
+
+.head__paragraph {
+    font-size: var(--font-size-18);
+    line-height: 150%; /*----*/
+    max-width: 445px;
+    margin-bottom: 88px;
+}
+
+.head__button {
+    font-size: var(--font-size-18);
+    padding: 24px 77px;
+}
+
+/* ______________ */
+
+.head__img-1 {
+    max-width: 240px;
+    width: 100%;
+    max-height: 200px;
+    height: 100%;
+    position: absolute;
+    right: 410px;
+    top: 40px;
+    z-index: 1;
+}
+
+.head__img-2 {
+    max-width: 540px;
+    width: 100%;
+    max-height: 590px;
+    height: 100%;
+    position: absolute;
+    right: 13px;
+    top: 15px;
+    z-index: 1;
+}
+
+
+/* ________________ benefit ____________________ */
+.benifit__content {
+    padding-top: 80px;
+    padding-bottom: 72px;
+}
+
+.benifit__training-conteiner {
+    margin-bottom: 16px;
+    align-items: center;
+}
+
+.benifit__img {
+    display: inline-block;
+    max-width: 190px;
+    max-height: 162px;
+    width: 100%;
+    height: 100%;
+    padding-left: 15px;
+}
+
+.benifit__h2 {
+    max-width: 385px;
+    margin-bottom: 17px;
+}
+
+.benifit__text {
+    line-height: 150% /*----*/;
+    color: var(--color-grey);
+max-width: 600px;
+}
+
+/* ----------- */
+.benifit__list {
+    align-items: center;
+}
+
+.benifit__item-text {
+    display: inline-block;
+    color: var(--color-grey);
+    font-weight: 700;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 80px;
+    padding: 20px 0;
+    padding-left: 108px;
+    overflow: visible;
+}
+
+.benifit-back-img-1 {
+background-image: url(../img/benifit_item-img-1.png);
+}
+
+.benifit-back-img-2 {
+background-image: url(../img/benifit_item-img-2.png);
+}
+
+.benifit-back-img-3 {
+  background-image: url(../img/benifit_item-img-3.png);  
+}
+
+
+/* ________________ teacher ____________________ */
+.teacher__container {
+    background-color: var(--color-black);
+    padding-top: 74px;
+    padding-bottom: 44px;
+}
+
+.teacher__item {
+    margin-bottom: 30px;
+}
+
+.teacher__h2 {
+    color: var(--color-white);
+    margin-bottom: 22px;
+}
+
+.teacher__item-1mg {
+    display: inline-block;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    margin-bottom: 29px;
+}
+
+.teacher__item-name {
+    color: var(--color-white);
+    font-size: var(--font-size-18);
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.teacher__item-text {
+    display: inline-block;
+    text-align: start;
+    color: var(--color-grey2);
+    line-height: 150%;
+    max-width: 254px;
+}
+
+/* ________________ course ____________________ */
+.course__container {
+padding-top: 74px;
+padding-bottom: 50px;
+}
+
+.course__h2 {
+    margin-bottom: 24px;
+}
+
+.course__item {
+    margin-bottom: 28px;
+}
+
+.course__imge {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 30px;
+}
+
+.course__item-container {
+    height: 100%;
+    background-color:  rgba(237, 240, 249, 1);
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* ------mod_time------ */
+.course__time {
+    display: flex;
+    flex-wrap: nowrap;
+    color: var(--color-white);
+    position: absolute;
+    top: 13px;
+    right: 5px;
+}
+
+.course__clock {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    outline: 2px solid var(--color-white);
+    border-radius: 50%;
+    margin-right: 7px;
+    position: relative;
+}
+
+.course__arrow {
+    width: 2px;
+    max-height: 7px;
+    height: 100%;
+    background-color: var(--color-white);
+    position: absolute;
+}
+
+.course__arrow-1 {
+    top: 4px;
+    left: 45%;
+}
+
+.course__arrow-2 {
+    left: 56%;
+    bottom: 4px;
+    transform: rotate(-50deg);
+}
+/* --------------------- */
+.course__item-content {
+    display: flex;
+    flex-direction: column;
+    min-height: 298px;
+    align-items: flex-start;
+    padding: 30px;
+    padding-top: 26px;
+    padding-bottom: 32px;
+}
+
+.course__h3 {
+    margin-bottom: 7px;
+}
+
+.course__text {
+    margin-bottom: 30px;
+    color: var(--color-grey);
+    line-height: 150%;
+}
+
+.course__btn {
+    font-weight: 700;
+    padding: 21px 60px;
+    margin-top: auto;
+}
+
+/* ___________________________________________ footer ________________________________________ */
+.footer {
+    margin: 0 auto;
+}
+
+.footer__container {
+    align-items: center;
+    background-color: var(--color-black2);
+    padding-top: 31px;
+    padding-bottom: 27px;
+}
+
+/* ________________ massenger ____________________ */
+.massenger__list {
+    justify-content: center;
+    align-items: center;
+}
+
+.massenger__item {
+    text-align: center;
+    max-width: 55px;
+}
+
+.massenger__link path {
+transition: fill .4s ease;
+}
+
+/* ______hover focus active______ */
+.massenger__link:focus {
+    outline: none;
+}
+
+.massenger__link:hover path,
+.massenger__link:focus path {
+    fill: rgb(245, 168, 2);
+    transition: fill .4s ease;
+}
+
+.massenger__link:active path {
+    fill: var(--color-blue);
+    transition: fill .2s ease;
+}
+
+/* ___________________ abbr ____________________ */
+.footer__abbr-container {
+    text-align: center;
+    padding-bottom: 2px;
+}
+
+.footer__abbr-text {
+    font-size: 13px;
+}
+
+.footer__abbr-color {
+    color: var(--color-blue);
+}
+
+
+/* _________________________________________________________MEDIA */
+/* _______________________________________________________________________________________MEDIA */
+/* _________________________________________________________MEDIA */
+@media (max-width: 1199.95px) {
+    .teacher__item {
+        text-align: center;
+    }
+
+    .teacher__item-text {
+        max-width: 354px;
+    }
+
+}
+
+@media (max-width: 991.5px) {
+    /* ____________________ head _____________________ */
+    .head__container {
+        background-image: url(../img/3D_skil_backgl__768.jpg);
+        background-size: cover;
+    }
+
+    .head__h1 {
+        font-size: 50px;
+        margin-bottom: 15px;
+    }
+
+    .head__content-1 {
+        padding-bottom: 158px;
+    }
+
+    .head__paragraph {
+        margin-bottom: 87px;
+    }
+
+    .head__img-1 {
+        max-width: 130px;
+        max-height: 116px;
+        top: 113px;
+        right: 213px;
+    }
+
+    .head__img-2 {
+        max-width: 312px;
+        max-height: 342px;
+        top: 125px;
+        right: 15px;
+    }
+    /* _______________________ benifit ____________________ */
+    .benifit__content {
+        padding-bottom: 57px;
+    }
+
+.benifit__training-conteiner {
+    margin-bottom: 22.5px;
+}
+
+    .benifit__img {
+        max-width: 270px;
+        max-height: 192px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .benifit__list {
+        align-items: flex-start;
+    }
+
+    .benifit__item-text {
+        background-position: top left;
+        padding-left: 0;
+        padding-top: 93px;
+    }
+
+    /* ___________________________ teacher ____________________________ */
+.teacher__container {
+    padding-bottom: 50px;
+}
+
+    .teacher__item {
+        text-align: start;
+        margin-bottom: 25px;
+    }
+
+    .teacher__item-1mg {
+        margin-bottom: 28px;
+    }
+
+    .teacher__item-text {
+        max-width: 350px;
+        word-spacing: -1px;
+    }
+
+    /* _________________________ course ______________________________ */
+
+        .course__time {
+            right: 11px;
+        }
+
+        .course__item-content {
+            min-height: 374px;
+        }
+
+        .course__btn {
+            padding: 21px 55px;
+        }
+
+        /* ________________________ footer ________________________ */
+        .footer__container {
+            padding-bottom: 25px;
+        }
+}
+
+/* __________________________________________ 767.98px ___________________________________________ */
+@media (max-width: 767.98px) {
+/* ________________________ header ____________________________ */
+.header__nav-content {
+    text-align: center;
+}
+
+.header__nav-logo {
+    margin-bottom: 32px;
+}
+
+.navigation__list {
+    justify-content: center;
+}
+
+/* _________________________ head _________________________ */
+.head__container {
+    background-image: url(../img/3D_skil_backgl.jpg);
+    background-size: cover;
+    background-position: bottom center;
+}
+
+
+.head__content-1 {
+padding-top: 77px;
+padding-bottom: 157px;
+}
+
+.benifit__training-conteiner {
+    flex-wrap: nowrap;
+    align-items: flex-start;
+}
+
+.head__img-1,
+.head__img-2 {
+    display: none;
+} 
+
+/* _________________________ benifit ___________________________ */
+.benifit__content {
+    padding-top: 83px;
+    padding-bottom: 36px;
+}
+
+.benifit__img {
+    max-width: 180px;
+    max-height: 170px;
+    width: 100%;
+    height: 100%;
+}
+
+/* __________________________ course ______________________________ */
+.course__item-content {
+    padding-right: 20px;
+    min-height: 472px;
+}
+
+.course__h3 {
+    line-height: 130%;
+    margin-bottom: 10px;
+}
+
+    .course__text {
+        max-width: 180px;
+    }
+
+    .course__btn {
+        padding: 21px 48px;
+    }
+}
+
+    /* _______________________________________ 575.98px _______________________________________ */
+    @media (max-width: 575.98px) {
+        
+/* ____________________________ burger______________________________ */
+.navigation__burger-contain {
+    display: none;
+    width: 30px;
+    height: 30px;
+}
+
+.navigation__burger-back {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: var(--color-white);
+}
+
+.navigation__burger-back:not(:last-child) {
+    margin-bottom: 6px;
+}
+
+.navigation__burger-contain:hover,
+.navigation__burger-contain:focus{
+    outline: none;
+}
+
+.navigation__burger-contain:hover .navigation__burger-back,
+.navigation__burger-contain:focus .navigation__burger-back {
+    background-color: rgb(245, 168, 2);
+    transition: color .4s ease;
+}
+
+/* __________________________ list_burger _______________*/
+.navigation__burger-list {
+    display: block;
+    flex-direction: column;
+    width: 320px;
+    height: 433px;
+    padding-left: 15px;
+    margin: 0;
+    background-color: #2f2c45;
+    z-index: 3;
+    position: absolute;
+    right: 0;
+    top: -26px;
+    transition: transform .4s ease;
+    transform: translateX(101%);
+}
+
+.navigation__burger-list-active {
+    transform: none;
+}
+
+ .navigation__burger-item {
+     margin-right: 0;
+ }
+
+ .navigation__burger-item:not(:last-child) {
+     margin-bottom: 56px;
+ }
+
+ .navigation__burger-close {
+    max-width: 320px;
+    position: relative;
+    padding-top: 30px;
+    margin-bottom: 48px;
+}
+
+.navigation__burger-btn-close {
+    display: block;
+    position: absolute;
+    right: 31px;
+}
+
+ .navigation__burger-close-1,
+.navigation__burger-close-2 {
+    width: 2px;
+    height: 23px;
+    background-color: var(--color-white);
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+}
+
+.navigation__burger-close-1 {
+    transform:rotate(45deg);
+}
+
+.navigation__burger-close-2 {
+    transform:rotate(-45deg);
+}
+
+
+/* ________________________________________________________________________________________________________________________ */
+/* ________________________________________________________________________ */
+
+        /* _______________header________________ */
+.course__item {
+    height: 100%;
+    flex-direction: column;
+}
+
+        .header__nav-container {
+            padding-bottom: 25px;
+            padding-top: 25px;
+        }
+
+        .header__nav-content {
+            text-align: start;
+        }
+
+        .header__nav-logo {
+            margin-bottom: 0;
+            display: inline-block;
+        }
+        .header__nav-logo svg {
+        width: 72px;
+        height: 16px;
+        }
+
+        .navigation__list {
+            display: none;
+        }
+        
+        .navigation__burger-content {
+            display: inline-block;
+        }
+
+        .navigation__burger-contain {
+            display: inline-block;
+        }
+
+        /* ______________________________body_________________________________ */
+        h2 {
+            font-size: 20px;
+        }
+        /* _____________________________________ head _______________________________________________ */
+        .head__content-1 {
+            padding-top: 50px;
+            padding-bottom: 70px;
+            margin: 0;
+        }
+
+        .head__h1 {
+            font-size: 30px;
+            margin-bottom: 4px;
+        }
+
+        .head__paragraph {
+            font-size: var(--font-size-16);
+            margin-bottom: 66px;
+            line-height: 130%;
+        }
+
+        .head__button {
+            font-size: var(--font-size-16);
+            padding: 20px 55px;
+        }
+
+        /* _____________________ benifit ________________________ */
+        .benifit__content {
+            padding-top: 53px;
+            padding-bottom: 30px;
+        }
+
+        .benifit__img {
+            display: none;
+        }
+
+
+        .benifit__h2 {
+            line-height: 120%;
+            margin-bottom: 5px;
+        }
+
+        .benifit__item-text {
+            min-height: 81px;
+            align-items: center;
+            line-height: 120%;
+            background-position: top left;
+            padding-top: 0;
+            padding-left: 110px;
+            overflow: visible;
+        }
+
+        .benifit__item:not(:last-child) {
+            margin-bottom: 14px;
+        }
+
+        /* _____________________ teacher ________________________ */
+        .teacher__item {
+            text-align: center;
+        }
+
+        .teacher__container {
+            padding-top: 47px;
+            padding-bottom: 24px;
+        }
+
+        .teacher__h2 {
+            margin-bottom: 27px;
+        }
+
+        .teacher__item-1mg {
+            margin-bottom: 27px;
+        }
+
+ /* _____________________ course ________________________ */
+ .course__item-container {
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+}
+
+ .course__container {
+    padding-top: 46px;
+    padding-bottom: 17px;
+    }
+
+    .course__h2 {
+        margin-bottom: 27px;
+    }
+
+    .course__item-content {
+        padding-right: 20px;
+        min-height: 350px;
+    }
+
+        .course__h3 {
+            max-width: 400px;
+        }
+
+        .course__text {
+            max-width: 430px;
+        }
+
+        .course__btn {
+            padding-left: 57px;
+            padding-right: 57px;
+        }
+
+    }
+
+    /* _______________________________________ 340px _______________________________________ */
+    @media (max-width: 340px) {
+
+         /* ____________________________________ teacer ________________________________- */
+        .teacher__item {
+            text-align: start;
+        }
+
+        /* ____________________________________ course ________________________________- */
+        .course__item-container {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+
+        .course__h3 {
+            max-width: 200px;
+        }
+
+        .course__item-content {
+            padding-right: 20px;
+            min-height: 472px;
+        }
+
+        .course__text {
+            max-width: 230px;
+        }
+    }
+
